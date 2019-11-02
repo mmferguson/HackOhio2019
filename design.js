@@ -1,7 +1,7 @@
 function Deck(){
-  this.cards =[];
-  this.cards= shuffle(this.cards);
-  this.shown=this.cards.pop();
+  this.cards = [];
+  this.cards = shuffle(this.cards);
+  this.shown = this.cards.pop();
 }
 function displayShown(card){
   var x = document.createElement("IMG");
@@ -13,7 +13,7 @@ function removeShown(){
   var parent = document.getElementById("card-cell");
   parent.removeChild(parent.firstChild());
 }
-function shuffle (array) {
+function shuffle(array) {
   var currentIndex = array.length;
   var temporaryValue, randomIndex;
 
