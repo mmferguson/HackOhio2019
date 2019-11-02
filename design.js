@@ -1,13 +1,14 @@
 function Deck(){
-  this.cards = [];
-  this.cards = shuffle(this.cards);
-  this.shown = this.cards.pop();
+  this.cards =["recycle1.jpg","recycle3.jpg"];
+  this.cards= shuffle(this.cards);
+  this.shown=this.cards.pop();
 }
 function displayShown(card){
   var x = document.createElement("IMG");
   x.setAttribute("class", "card-image");
-  x.setAttribute("src", card);
+  x.setAttribute("src", "Images/"+ card);
   x.setAttribute("alt", card);
+  document.getElementById("card-cell").appendChild(x);
 }
 function removeShown(){
   var parent = document.getElementById("card-cell");
@@ -30,3 +31,13 @@ function shuffle(array) {
   }
   return array;
 }
+function checkGuess(num){
+  var card = document.getElementsByClassName("card-image")[0];
+  if(num==0 && card.getAttribute("alt").indexOf("non") == -1){
+    alert("RECYCLED");
+  }else if(num==1 && card.getAttribute("alt").indexOf("non") > -1){
+    alert("NO");
+  }
+}
+var d = new Deck();
+displayShown(d.shown);
