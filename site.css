@@ -19,8 +19,6 @@ x p {
 .topnav {
     background-color: rgb(102 102 102);
     overflow: hidden;
-    display: inline-block;
-    list-style-type: none;
 }
 
 
